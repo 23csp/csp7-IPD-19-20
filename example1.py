@@ -5,23 +5,24 @@
 #     strategy_description: a string
 #     move: A function that returns 'c' or 'b'
 ####
+team_name = 'E1'
+strategy_name = 'Betray'
+strategy_description = 'Always betray.'
+    
+def move(my_history, their_history, my_score, their_score):  
+    #This example player always betrays.      
+    return 'b'
 
+'''
 team_name = 'We_love_csp'
 strategy_name = 'alternate until betrayed then betray'
 strategy_description = 'our program will alternate. Though, if the other program betrays, then it will betray'
 def move(my_history, their_history, my_score, their_score):
-    ''' Arguments accepted: my_history, their_history are strings.
-    my_score, their_score are ints.
-    
-    Make my move.
-    Returns 'c' or 'b'. 
-    '''
     if 'b' in their_history: 
        return 'b'
-    elif:
-       len(my_history)%2 == 0:
+       if len(my_history)%2 == 0:
            return 'c'
-        else:
+       else:
            return 'b'
     else: 
        return 'c'
@@ -31,4 +32,4 @@ def move(my_history, their_history, my_score, their_score):
     # The most recent round is my_history[-1] and their_history[-1].
     
     # Analyze my_history and their_history and/or my_score and their_score.
-    # Decide whether to return 'c' or 'b'.
+    # Decide whether to return 'c' or 'b'. '''

@@ -1,14 +1,25 @@
-team_name = 'We love csp' # Only 10 chars displayed.
+####
+# Each team's file must define four tokens:
+#     team_name: a string
+#     strategy_name: a string
+#     strategy_description: a string
+#     move: A function that returns 'c' or 'b'
+####
+team_name = 'E0'
+strategy_name = 'Collude'
+strategy_description = 'Always collude.'
+    
+def move(my_history, their_history, my_score, their_score):
+    
+    # This player always colludes.
+    return 'c'
+
+
+'''team_name = 'We love csp' # Only 10 chars displayed.
 strategy_name = 'Collude untill betrayed'
 strategy_description = 'our program will collude. Though, if the other program betrays, then it will betray'
     
-def move(my_history, their_history, my_score, their_score):
-    ''' Arguments accepted: my_history, their_history are strings.
-    my_score, their_score are ints.
-    
-    Make my move.
-    Returns 'c' or 'b'. 
-    '''
+def move(my_history, their_history, my_score, their_score):    
     if 'b' in their_history: 
        if len(my_history)%2 == 0:
            return 'c'
@@ -16,6 +27,7 @@ def move(my_history, their_history, my_score, their_score):
            return 'b'
     else: 
        return 'c'
+       '''
     # my_history: a string with one letter (c or b) per round that has been played with this opponent.
     # their_history: a string of the same length as history, possibly empty. 
     # The first round between these two players is my_history[0] and their_history[0].

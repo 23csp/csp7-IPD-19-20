@@ -15,6 +15,7 @@ round's result occurred. If the previous round's result never has
 happened, collude except after being severly punished.'''
     
 def move(my_history, their_history, my_score, their_score):
+    return 'b'
     '''Make my move based on the history with this player.
     
     history: a string with one letter (c or b) per round that has been played with this opponent.
@@ -24,7 +25,7 @@ def move(my_history, their_history, my_score, their_score):
     
     Returns 'c' or 'b' for collude or betray.
     '''
-    if len(my_history)==0: # It's the first round: collude
+    '''if len(my_history)==0: # It's the first round: collude
         return 'c'
     else:
         # If there was a previous round just like the last one,
@@ -46,4 +47,4 @@ def move(my_history, their_history, my_score, their_score):
         if my_history[-1]=='c' and their_history[-1]=='b':
             return 'b' # Betray if they were severely punished last time
         else:
-            return 'c' # Otherwise collude.
+            return 'c' # Otherwise collude.'''
